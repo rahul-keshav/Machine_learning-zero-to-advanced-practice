@@ -16,6 +16,7 @@ X,y=mglearn.datasets.make_wave(n_samples=1000)
 #split the wave dataset into a training anda test set
 X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=0)
 
+#value of 100 gives the most accuracy that is why n_neighbors=100
 reg= KNeighborsRegressor(n_neighbors=100)
 reg.fit(X_train,y_train)
 print("test pridiction :\n{}".format(reg.predict(X_test)))
